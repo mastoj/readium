@@ -7,12 +7,11 @@
             <h1 class="sidebar__information__title">{{@blog.title}}</h1>
             <h2 class="sidebar__information__description">{{@blog.description}}</h2>
             <div class="sidebar__customlinks">
-                <a href="/aboutme/">About me</a> · <a href="/readium-ghost-theme/">Readium</a> · <a href="/marisa-ghost-theme/">Marisa</a> · <a href="/chiara/">Chiara</a>
+                <a href="/aboutme/">About me</a>
             </div>
             <footer class="sidebar__information__footer">
-                <a href="https://twitter.com/starburst1977" target="_blank"><i class="fa fa-twitter"></i></a>
-                <a href="https://github.com/starburst1977" target="_blank"><i class="fa fa-github"></i></a>
-                <a href="http://dribbble.com/Starburst1977" target="_blank"><i class="fa fa-dribbble"></i></a>
+                <a href="https://twitter.com/TomasJansson" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://github.com/mastoj" target="_blank"><i class="fa fa-github"></i></a>
             </footer>
         </section>
     </div>
@@ -25,7 +24,6 @@
                     <h4 class="contentlist__headline">Featured</h4>
                     <article class="contentlist__article {{post_class}} featured" itemscope itemtype="http://schema.org/BlogPosting" role="article">
                         <header class="post-header">
-                            <div class="contentlist__article__userimage user-image" style="background-image: url({{author.image}})"></div>
                             <h2 class="contentlist__article__headline post-title" itemprop="name"><a href="{{url}}" itemprop="url">{{{title}}}</a></h2>
                         </header>
                         <div id="img-post-cover" style="display: none; background-image: url('')"></div>
@@ -42,13 +40,11 @@
                 {{/if}}
             {{/foreach}}
         </div>
-        <h4 class="contentlist__headline">Regular</h4>
         {{#foreach posts}}
             {{#if featured}}
             {{else}}
                 <article class="contentlist__article {{post_class}}" itemscope itemtype="http://schema.org/BlogPosting" role="article">
                     <header class="post-header">
-                        <div class="contentlist__article__userimage user-image" style="background-image: url({{author.image}})"></div>
                         <h2 class="contentlist__article__headline post-title" itemprop="name"><a href="{{url}}" itemprop="url">{{{title}}}</a></h2>
                     </header>
                     <section class="contentlist__article__excerpt post-excerpt" itemprop="description">
@@ -70,8 +66,9 @@
         <footer class="footer site-footer">
             <a class="subscribe icons-feed" href="{{@blog.url}}/rss/"><span class="tooltip">Subscribe!</span></a>
             <div class="inner">
-                 <section class="copyright">All content copyright <a href="/">{{@blog.title}}</a> &copy; 2013 &bull; All rights reserved.</section>
+                 <section class="copyright">All content copyright <a href="/">{{@blog.title}}</a> &copy; 2014 &bull; All rights reserved.</section>
                  <section class="poweredby">Proudly published with <a class="icons-ghost" href="http://ghost.org" target="_blank">Ghost</a></section>
+                 <section class="poweredby">Theme by Sven Read <a class="icons-ghost" href="http://www.svenread.com/readium-ghost-theme/" target="_blank">Readium</a></section>
             </div>
         </footer>
     </section>
