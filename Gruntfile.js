@@ -26,7 +26,7 @@ module.exports = function Gruntfile(grunt) {
                 files: {
                     'assets/css/main.css': [
                         'assets/css/main.css',
-                        'vendor/highlightjs/styles/default.css',
+                        'vendor/highlightjs/styles/github.css',
                         'vendor/Font-Awesome/css/font-awesome.min.css',
                         'vendor/fluidbox/css/fluidbox.css'
                     ]
@@ -47,6 +47,7 @@ module.exports = function Gruntfile(grunt) {
                 options: {
                     baseUrl: '.',
                     paths: {
+                        requirejs: 'vendor/requirejs/require',
                         jquery: 'vendor/jquery/jquery',
                         hljs: 'vendor/highlightjs/highlight.pack',
                         fluidbox: 'vendor/fluidbox/jquery.fluidbox',
@@ -76,7 +77,8 @@ module.exports = function Gruntfile(grunt) {
                         }
                     },
                     name: 'assets/js/readium.js',
-                    out: 'assets/js/readium-built.js'
+                    out: 'assets/js/readium-built.js',
+                    include: ['requirejs']
                 }
             }
         },
